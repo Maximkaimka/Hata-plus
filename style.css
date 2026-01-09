@@ -219,16 +219,25 @@ h3 {
 .header-image {
     background-image: url(img/headerimg.png);
     text-align: center;
-    padding: 59rem 0 44rem;
+    padding: 59rem 20rem 44rem;
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 42rem 0;
-    justify-content: space-between;
+main.wrapper {
+    column-gap: 28rem;
+    padding: 42rem 20rem;
+    row-gap: 30rem;
+}
+
+@media screen and (min-width: 1000px) {
+    main.wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 42rem 20rem;
+        justify-content: space-between;
+    }
 }
 
 .maintext h1 {
@@ -248,6 +257,13 @@ main {
     font-family: "Arial";
 }
 
+.maintext p {
+    font-size: 14rem;
+    line-height: 24rem;
+    color: #666666;
+    font-family: "Arial";
+}
+
 .krim {
     margin-bottom: 20rem;
 }
@@ -257,7 +273,7 @@ main {
 }
 
 .maintext {
-    padding-bottom: 66rem;
+    padding-bottom: 34rem;
 }
 
 hr {
@@ -266,20 +282,44 @@ hr {
     margin-bottom: 31rem;
 }
 
+.popular-project {
+    font-size: 24rem;
+    line-height: 24rem;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+}
+
 aside h2 {
     font-size: 16rem;
     color: #ffffff;
     font-weight: 400;
     font-family: "Roboto Slab";
     background: #1f1f56;
-    max-width: 220rem;
     border-radius: 3rem 3rem 0 0;
     padding: 15rem;
 }
 
 aside {
-    max-width: 220rem;
     width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+    aside h2 {
+        font-size: 16rem;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Roboto Slab";
+        background: #1f1f56;
+        max-width: 220rem;
+        border-radius: 3rem 3rem 0 0;
+        padding: 15rem;
+    }
+
+    aside {
+        max-width: 220rem;
+        width: 100%;
+    }
 }
 
 aside li {
@@ -302,6 +342,7 @@ aside a {
     font-family: "Arial";
     background: #e4e4ec;
     padding: 15rem;
+    padding-left: 30rem;
     display: block;
     text-decoration: none;
 }
@@ -333,6 +374,7 @@ aside a:hover:before {
     height: 6rem;
     width: 10.5rem;
     top: 20rem;
+    transition: 0.5s;
 }
 
 aside a:hover {
@@ -397,8 +439,12 @@ figure:hover h3 {
     text-decoration: underline;
 }
 
-section h2 {
+.popular-project h2 {
     margin-bottom: 24rem;
+    font-size: 24rem;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
 }
 
 .maintxtmenu {
