@@ -1,7 +1,12 @@
 body {
+    background: green;
     margin: 0;
     cursor: url(cursor/cursor.cur), auto;
     cursor: url(cursor/cursor2.cur), pointer;
+}
+
+html {
+    font-size: 1px;
 }
 
 .naw-menu {
@@ -10,9 +15,11 @@ body {
 }
 
 .wrapper {
-    max-width: 960px;
+    max-width: 960rem;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20rem;
+    box-sizing: border-box;
 }
 
 .naw-menu ul {
@@ -20,19 +27,54 @@ body {
 }
 
 .naw-menu li {
-    font-size: 14px;
-    letter-spacing: 2px;
-    line-height: 24px;
+    font-size: 14rem;
+    letter-spacing: 2rem;
+    line-height: 24rem;
     color: #b1b1d2;
     font-family: "Arial";
+}
+
+.burger-menu span {
+    display: block;
+    width: 25rem;
+    height: 3rem;
+    background: #ffffff;
+    position: relative;
+}
+
+.burger-menu span:before {
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 8rem;
+}
+
+.burger-menu span:after {
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 16rem;
+}
+
+.burger-menu {
+    display: block;
+    margin-top: -8rem;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20rem;
+    box-sizing: border-box;
 }
+
 
 .ul {
     list-style: none;
@@ -40,16 +82,30 @@ body {
     padding: 0;
 }
 
-.naw {
-    display: flex;
-    justify-content: space-between;
-    max-width: 480px;
-    width: 100%;
+ul.naw {
+    display: none;
+}
 
+@media screen and (min-width: 650px) {
+    ul.naw {
+        display: flex;
+        justify-content: space-between;
+        max-width: 480rem;
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
 }
 
 .img-naw li {
-    margin-left: 24px;
+    margin-left: 24rem;
+}
+
+.img-naw {
+    display: flex;
+    align-items: center;
 }
 
 .header-info {
@@ -58,12 +114,12 @@ body {
 }
 
 .phone img {
-    margin-right: 11px;
+    margin-right: 11rem;
 }
 
 .phone a {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 18rem;
+    line-height: 24rem;
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
@@ -93,69 +149,69 @@ h3 {
 }
 
 .gmail img {
-    margin-right: 12px;
+    margin-right: 12rem;
 }
 
 .email {
-    margin-bottom: 12px;
+    margin-bottom: 12rem;
 }
 
 .gmail a {
-    font-size: 16px;
+    font-size: 16rem;
     text-decoration: none;
     color: #25252c;
     font-family: "Arial";
 }
 
 .call a {
-    font-size: 16px;
+    font-size: 16rem;
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
     text-decoration: none;
-    border-radius: 25px;
-    border: 2px solid #fd8300;
-    padding: 14.5px 28px;
+    border-radius: 25rem;
+    border: 2rem solid #fd8300;
+    padding: 14.5rem 28rem;
     display: inline-block;
 }
 
 .header-info {
-    padding: 36px 0;
+    padding: 36rem 0;
 }
 
 .header-image h2 {
-    font-size: 30px;
+    font-size: 30rem;
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
     font-family: "Roboto Slab";
-    margin-bottom: 12px;
+    margin-bottom: 12rem;
 }
 
 .one {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14rem;
+    line-height: 24rem;
     color: #ffffff;
     font-family: "Arial";
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 16rem;
 }
 
 .two {
-    font-size: 24px;
+    font-size: 24rem;
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
 }
 
 .two span {
-    font-size: 40px;
+    font-size: 40rem;
 }
 
 .header-image {
     background-image: url(img/headerimg.png);
     text-align: center;
-    padding: 59px 0 44px;
+    padding: 59rem 0 44rem;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -163,21 +219,21 @@ h3 {
 main {
     display: flex;
     flex-direction: row-reverse;
-    padding: 42px 0;
+    padding: 42rem 0;
     justify-content: space-between;
 }
 
 .maintext h1 {
-    font-size: 30px;
+    font-size: 30rem;
     color: #24242b;
     font-weight: 700;
     font-family: "Roboto Slab";
-    margin-bottom: 28px;
+    margin-bottom: 28rem;
 }
 
 .maintext a {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14rem;
+    line-height: 24rem;
     text-decoration: underline;
     color: #fd8300;
     font-weight: bold;
@@ -185,36 +241,36 @@ main {
 }
 
 .krim {
-    margin-bottom: 20px;
+    margin-bottom: 20rem;
 }
 
 .maintextp2 {
-    margin-bottom: 25px;
+    margin-bottom: 25rem;
 }
 
 .maintext {
-    padding-bottom: 66px;
+    padding-bottom: 66rem;
 }
 
 hr {
     border: none;
-    border-top: #e4e4ec 1px solid;
-    margin-bottom: 31px;
+    border-top: #e4e4ec 1rem solid;
+    margin-bottom: 31rem;
 }
 
 aside h2 {
-    font-size: 16px;
+    font-size: 16rem;
     color: #ffffff;
     font-weight: 400;
     font-family: "Roboto Slab";
     background: #1f1f56;
-    max-width: 220px;
-    border-radius: 3px 3px 0 0;
-    padding: 15px;
+    max-width: 220rem;
+    border-radius: 3rem 3rem 0 0;
+    padding: 15rem;
 }
 
 aside {
-    max-width: 220px;
+    max-width: 220rem;
     width: 100%;
 }
 
@@ -223,33 +279,33 @@ aside li {
 }
 
 aside a {
-    font-size: 14px;
+    font-size: 14rem;
     color: #25252c;
     font-family: "Arial";
     background: #e4e4ec;
-    padding: 15px;
+    padding: 15rem;
     display: block;
     text-decoration: none;
 }
 
 .pidspisok a {
-    font-size: 14px;
+    font-size: 14rem;
     color: #666666;
     font-family: "Arial";
     background: #e4e4ec;
-    padding: 15px;
+    padding: 15rem;
     display: block;
     text-decoration: none;
 }
 
 .pidspisok a:hover {
     background: #cecedd;
-    font-size: 14px;
+    font-size: 14rem;
     color: #666666;
     font-family: "Arial";
 }
 
-ul.pidspisok a:before{
+ul.pidspisok a:before {
     content: '';
     display: none;
 }
@@ -259,16 +315,16 @@ aside a:before {
     position: absolute;
     display: block;
     background: url('img/arrow.png');
-    width: 6px;
-    height: 10.5px;
-    right: 14px;
+    width: 6rem;
+    height: 10.5rem;
+    right: 14rem;
 }
 
 aside a:hover:before {
     background: url(img/arrowhover.png);
-    height: 6px;
-    width: 10.5px;
-    top: 20px;
+    height: 6rem;
+    width: 10.5rem;
+    top: 20rem;
 }
 
 aside a:hover {
@@ -283,8 +339,8 @@ aside a:hover {
 
 .span1 {
     display: inline-block;
-    width: 10px;
-    height: 20px;
+    width: 10rem;
+    height: 20rem;
     background: url(/img/fb.png) no-repeat;
 }
 
@@ -294,8 +350,8 @@ aside a:hover {
 
 .span2 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 20rem;
+    height: 20rem;
     background: url(img/tw.png) no-repeat;
 }
 
@@ -311,8 +367,8 @@ aside a:hover {
 
 .span3 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 20rem;
+    height: 20rem;
     background: url(img/inst.png) no-repeat;
 }
 
@@ -334,25 +390,25 @@ figure:hover h3 {
 }
 
 section h2 {
-    margin-bottom: 24px;
+    margin-bottom: 24rem;
 }
 
 .maintxtmenu {
-    max-width: 710px;
+    max-width: 710rem;
     width: 100%;
 }
 
 h3 {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 14rem;
+    line-height: 24rem;
     color: #1f1f56;
     font-weight: bold;
     font-family: "Arial";
 }
 
 .cards p {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 13rem;
+    line-height: 18rem;
     color: #9999a6;
     font-family: "Arial";
 }
@@ -360,7 +416,7 @@ h3 {
 .footer-nav-menu {
     display: flex;
     justify-content: space-between;
-    padding: 41px 0;
+    padding: 41rem 0;
 }
 
 footer {
@@ -376,8 +432,8 @@ footer ul {
 }
 
 footer a {
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 14rem;
+    line-height: 26rem;
     color: #666666;
     font-family: "Arial";
     text-decoration: none;
@@ -389,7 +445,7 @@ footer a:hover {
 }
 
 .ul1 {
-    margin-right: 143px;
+    margin-right: 143rem;
 }
 
 ul,
@@ -405,14 +461,14 @@ ol {
 
 .buildcompany p {
     text-align: center;
-    font-size: 13px;
+    font-size: 13rem;
     color: #9999a6;
     font-family: "Arial";
-    padding: 16px 0;
+    padding: 16rem 0;
 }
 
 .flexmb {
-    margin-bottom: 12px;
+    margin-bottom: 12rem;
 }
 
 .ul li:hover {
@@ -424,7 +480,7 @@ header a:hover {
 }
 
 .phone {
-    padding-left: 28px;
+    padding-left: 28rem;
     position: relative;
 }
 
@@ -432,15 +488,15 @@ header a:hover {
     content: '';
     display: block;
     background: url(img/phone.png);
-    width: 17px;
-    height: 17px;
+    width: 17rem;
+    height: 17rem;
     position: absolute;
-    left: 0px;
-    top: 2px;
+    left: 0rem;
+    top: 2rem;
 }
 
 .email a {
-    padding-left: 29px;
+    padding-left: 29rem;
     position: relative;
 }
 
@@ -448,15 +504,15 @@ header a:hover {
     content: '';
     display: block;
     background: url(img/email.png);
-    width: 16.5px;
-    height: 13px;
+    width: 16.5rem;
+    height: 13rem;
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 2rem;
 }
 
 .skype a {
-    padding-left: 29px;
+    padding-left: 29rem;
     position: relative;
 }
 
@@ -465,7 +521,7 @@ header a:hover {
     position: absolute;
     display: block;
     background: url(img/skype.png);
-    width: 18px;
-    height: 18px;
+    width: 18rem;
+    height: 18rem;
     left: 0;
 }
